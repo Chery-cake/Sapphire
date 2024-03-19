@@ -31,10 +31,10 @@ ODEPEND="
 
 DEPEND="
     dev-libs/gjs
-    >=dev-libs/glib-2.76.4:2
+    >=dev-libs/glib-2.76.4
     sys-libs/glibc
     >=x11-libs/gtk+-3
-    gui-libs/gtk-layer-shell
+    gui-libs/gtk-layer-shell[introspection]
     sys-libs/pam
 
     ${ODEPEND}
