@@ -285,4 +285,5 @@ src_compile() {
 
 src_install(){
     cargo install matugen || die
+    mv ${S}/../cargo_home/bin ${D}
 }
