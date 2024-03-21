@@ -16,8 +16,6 @@ IUSE="bluetooth greetd service utils notfications networkmanager powerprofile ba
 
 REQUIRED_USE=""
 
-FEATURES="-network-sandbox"
-
 ODEPEND="
     bluetooth? ( >=net-wireless/gnome-bluetooth-42 )
     greetd? ( gui-libs/greetd )
