@@ -231,7 +231,7 @@ inherit cargo
 DESCRIPTION="A material you color generation tool with templates"
 HOMEPAGE="https://github.com/InioX/matugen"
 SRC_URI="
-    https://github.com/InioX/matugen/archive/refs/tags/v${PV}.tar.gz -> ${PN}.tar.gz
+    https://github.com/InioX/matugen/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
     ${CARGO_CRATE_URIS}"
 
 LICENSE="GPL-2"
@@ -247,8 +247,12 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+# rust does not use *FLAGS from make.conf, silence portage warning
+# update with proper path to binaries this crate installs, omit leading /
+QA_FLAGS_IGNORED="usr/bin/${PN}"
+
 src_unpack() {
-    unpack ${PN}.tar.gz
+    unpack ${P}.tar.gz
     cargo_src_unpack
 }
 
@@ -262,6 +266,8 @@ src_compile() {
 }
 
 src_install(){
-    cargo install matugen || die
-    mv ${S}/../cargo_home/bin ${D}
+	cargo update || die
+    cargo build || die
+    mkdir ${D}/bin
+    mv ${S}/target/release/matugen ${D}/bin
 }
