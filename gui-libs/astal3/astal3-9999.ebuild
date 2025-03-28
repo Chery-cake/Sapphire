@@ -22,7 +22,7 @@ DEPEND="
   dev-build/meson
   dev-lang/vala[valadoc]
   x11-libs/gtk+:3[introspection]
-  gui-libs/gtk-layer-shell[introspection]
+  gui-libs/gtk-layer-shell[introspection,vala]
 "
 RDEPEND="${DEPEND}"
 BDEPEND="

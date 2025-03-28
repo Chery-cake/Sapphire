@@ -15,15 +15,14 @@ EGIT_REPO_URI="https://github.com/Aylur/astal.git"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="gtk3 gtk4"
+IUSE=""
 
 DEPEND="
   gui-libs/astal-io
   dev-build/meson
   dev-lang/vala[valadoc]
-
-  gtk3? ( gui-libs/astal3 )
-  gtk4? ( gui-libs/astal4 )
+  gui-libs/gtk[introspection]
+  gui-libs/gtk4-layer-shell[introspection,vala]
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
@@ -45,11 +44,11 @@ src_prepare(){
 src_compile(){
   export VALAC="$(type -P valac-$(vala_best_api_version))"
   
-  cd ${S}/lang/gjs
+  cd ${S}/lib/astal/gtk4
   meson setup --prefix /usr build || die
 }
 
 src_install(){  
-  cd ${S}/lang/gjs
+  cd ${S}/lib/astal/gtk4
   meson install -C build --destdir "${D}" || die
 }
