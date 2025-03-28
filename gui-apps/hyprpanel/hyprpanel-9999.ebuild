@@ -30,10 +30,11 @@ DEPEND="
 RDEPEND="
   ${DEPEND}
 
-  gui-libs/astal-cava
+  # gui-libs/astal-cava
   gui-libs/astal-hyprland
   gui-libs/astal-mpris
   gui-libs/astal-notifd
+  gui-libs/astal-tray
 "
 BDEPEND=""
 
