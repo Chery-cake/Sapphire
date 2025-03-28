@@ -21,7 +21,7 @@ DEPEND="
   gui-libs/astal-io
   dev-build/meson
   dev-lang/vala[valadoc]
-  x11-misc/appmenu-gtk-module
+  gui-libs/appmenu-glib-translator
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
