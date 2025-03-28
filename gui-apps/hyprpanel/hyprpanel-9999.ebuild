@@ -43,5 +43,5 @@ src_compile(){
 }
 
 src_install(){
-  meson install -C build || die
+  meson install -C build --destdir "${D}" || die
 }
