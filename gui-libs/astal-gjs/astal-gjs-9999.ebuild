@@ -44,11 +44,11 @@ src_prepare(){
 src_compile(){
   export VALAC="$(type -P valac-$(vala_best_api_version))"
   
-  cd ${S}/lib/astal/lang/gjs
+  cd ${S}/lang/gjs
   meson setup --prefix /usr build || die
 }
 
 src_install(){  
-  cd ${S}/lib/astal/lang/gjs
+  cd ${S}/lang/gjs
   meson install -C build --destdir "${D}" || die
 }
