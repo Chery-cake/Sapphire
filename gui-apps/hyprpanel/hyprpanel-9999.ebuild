@@ -35,13 +35,13 @@ src_unpack(){
 }
 
 src_configure(){
-  meson setup build
+  meson setup build || die
 }
 
 src_compile(){
-  meson compile -C build
+  meson compile -C build || die
 }
 
 src_install(){
-  meson install -C build
+  meson install -C build || die
 }
