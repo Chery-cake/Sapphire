@@ -16,6 +16,7 @@ KEYWORDS="~amd64"
 IUSE=""
  
 DEPEND="
+  gui-apps/astal-gjs
   gui-apps/ags
   media-video/wireplumber
   gnome-base/libgtop
