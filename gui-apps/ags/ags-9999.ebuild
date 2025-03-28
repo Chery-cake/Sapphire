@@ -16,7 +16,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="
-  gui-libs/astal-gjs
+  gui-libs/gjs
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
