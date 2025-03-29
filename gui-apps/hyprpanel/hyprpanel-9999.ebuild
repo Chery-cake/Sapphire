@@ -39,6 +39,9 @@ RDEPEND="
   gui-libs/astal-network
   gui-libs/astal-bluetooth
   gui-libs/astal-wayland-glib
+  gui-libs/astal-battery
+  gui-libs/astal-powerprofiles
+  gui-libs/astal-river
 "
 
 BDEPEND=""
