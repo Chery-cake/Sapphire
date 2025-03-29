@@ -35,6 +35,7 @@ RDEPEND="
   gui-libs/astal-mpris
   gui-libs/astal-notifd
   gui-libs/astal-tray
+  gui-libs/astal-wireplumber
 "
 
 BDEPEND=""
