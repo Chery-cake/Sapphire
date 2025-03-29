@@ -36,6 +36,9 @@ RDEPEND="
   gui-libs/astal-notifd
   gui-libs/astal-tray
   gui-libs/astal-wireplumber
+  gui-libs/astal-network
+  gui-libs/astal-bluetooth
+  gui-libs/astal-wayland-glib
 "
 
 BDEPEND=""
