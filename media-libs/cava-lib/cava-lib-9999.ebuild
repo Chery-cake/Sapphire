@@ -22,7 +22,7 @@ DEPEND="
   dev-util/pkgconf
   dev-libs/iniparser
 
-  alsa? ( media-sound/alsa-lib )
+  alsa? ( media-libs/alsa-lib )
   pulseaudio? ( media-sound/pulseaudio )
   pipewire? ( media-video/pipewire )
   portaudio? ( media-libs/portaudio )
