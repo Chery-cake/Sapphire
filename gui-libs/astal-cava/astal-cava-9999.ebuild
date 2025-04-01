@@ -21,7 +21,7 @@ DEPEND="
   gui-libs/astal-io
   dev-build/meson
   dev-lang/vala[valadoc]
-  media-sound/cava-lib
+  media-libs/cava-lib
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
