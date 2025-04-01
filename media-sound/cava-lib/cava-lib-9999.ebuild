@@ -27,7 +27,7 @@ DEPEND="
   pipewire? ( media-video/pipewire )
   portaudio? ( media-libs/portaudio )
   sndio? ( media-sound/sndio )
-  jack? ( media-sound/jack )
+  jack? ( media-sound/jack2 )
 
   sdl2? ( media-libs/libsdl2 )
   ncurses? ( sys-libs/ncurses )
