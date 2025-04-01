@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit git-r3 autotools
+inherit git-r3 autotools meson
 
 DESCRIPTION="Cross-platform Audio Visualizer"
 HOMEPAGE="https://github.com/LukashonakV/cava"
@@ -22,20 +22,18 @@ DEPEND="
   dev-util/pkgconf
   dev-libs/iniparser
 
-  alsa? ( media-libs/alsa-lib )
+  alsa? ( media-sound/alsa-lib )
   pulseaudio? ( media-sound/pulseaudio )
   pipewire? ( media-video/pipewire )
   portaudio? ( media-libs/portaudio )
   sndio? ( media-sound/sndio )
-  jack? ( media-sound/jack2 )
+  jack? ( media-sound/jack )
 
   sdl2? ( media-libs/libsdl2 )
   ncurses? ( sys-libs/ncurses )
 "
 RDEPEND="${DEPEND}"
-BDEPEND="
-  
-"
+BDEPEND=""
 
 src_unpack(){
   git-r3_src_unpack
@@ -43,20 +41,4 @@ src_unpack(){
 
 src_prepare(){
   default
-}
-
-src_configure(){
-  cd ${S}
-  ./autogen.sh
-  ./configure
-}
-
-src_compile(){
-  cd ${S}
-  make
-}
-
-src_install(){
-  cd ${S}
-  make install DESTDIR=${D}
 }
