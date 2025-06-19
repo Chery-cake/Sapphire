@@ -26,6 +26,8 @@ DEPEND="
   gui-apps/wl-clipboard
   sys-power/upower
   gnome-base/gvfs
+  <x11-libs/gtksourceview-4.0.0
+  net-libs/libsoup
 "
 RDEPEND="
   ${DEPEND}
